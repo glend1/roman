@@ -3,6 +3,7 @@ export const convertRomanNumerals = (romanNumerals: string) => {
     for (let i = 0; i < romanNumerals.length; i++) {
         try {
             isValidRomanNumeralOrder(i, romanNumerals)
+            containsFourSequentialLetters(i, romanNumerals)
             const currentNumber = convertSingleRomanNumeral(romanNumerals[i])
             const nextLetter = romanNumerals[i + 1]
             nextLetter ?
@@ -27,5 +28,13 @@ const isValidRomanNumeralOrder = (i: number, romanNumerals: string) => {
         if (convertSingleRomanNumeral(romanNumerals[i]) < convertSingleRomanNumeral(restOfString[j])) {
             throw "Not a valid Roman numeral order"
         }
+    }
+}
+
+const containsFourSequentialLetters = (i: number, romanNumerals: string) => {
+    if (romanNumerals[i] === romanNumerals[i+1] &&
+        romanNumerals[i] === romanNumerals[i+2] &&
+        romanNumerals[i] === romanNumerals[i+3]) {
+        throw "Contains 4 sequential letters"
     }
 }

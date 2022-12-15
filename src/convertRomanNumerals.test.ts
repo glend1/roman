@@ -7,7 +7,6 @@ describe.each([{romanNumeral: "I", number: 1},
         {romanNumeral: "D", number: 500},
         {romanNumeral: "M", number: 1000},
         {romanNumeral: "VI", number: 6},
-        {romanNumeral: "IIII", number: 4},
         {romanNumeral: "DCLX", number: 660},
         {romanNumeral: "IV", number: 4},
         {romanNumeral: "IX", number: 9},
@@ -31,5 +30,8 @@ describe("Roman numeral edge cases", () => {
     })
     it("Should convert the input to upper case", () => {
         expect(convertRomanNumerals("i")).toEqual(1)
+    })
+    it("Should thow an error if the string contains 4 sequential numbers", () => {
+        expect(() => convertRomanNumerals("IIII")).toThrow("Contains 4 sequential letters")
     })
 })
