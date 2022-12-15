@@ -36,4 +36,13 @@ describe("convertRomanNumerals", () => {
     it("Should convert IX to 9", () => {
         expect(convertRomanNumerals("IX")).toEqual(9)
     })
+    it("Should convert XL to 40", () => {
+        expect(convertRomanNumerals("XL")).toEqual(40)
+    })
+    it("Should convert CCCLXIX to 369", () => {
+        expect(convertRomanNumerals("CCCLXIX")).toEqual(369)
+    })
+    it("Should convert MMDCCLI to 2751", () => {
+        expect(convertRomanNumerals("MMDCCLI")).toEqual(2751)
+    })
 })
