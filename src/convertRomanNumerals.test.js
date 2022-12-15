@@ -1,7 +1,6 @@
 import { convertRomanNumerals } from "./convertRomanNumerals";
 
 describe("convertRomanNumerals", () => {
-    // test that everything comes in uppercase.
     it("Should convert I to 1", () => {
         expect(convertRomanNumerals("I")).toEqual(1)
     })
@@ -46,5 +45,8 @@ describe("convertRomanNumerals", () => {
     })
     it("Should fail because H is not a roman numeral", () => {
         expect(convertRomanNumerals("H")).toEqual("Not a valid Roman Numeral")
+    })
+    it("Should convert the input to upper case", () => {
+        expect(convertRomanNumerals("i")).toEqual(1)
     })
 })

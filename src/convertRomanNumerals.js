@@ -20,7 +20,7 @@ export const convertRomanNumerals = (romanNumerals) => {
 }
 
 const convertSingleRomanNumeral = (romanNumeral) => {
-    const number = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000 }[romanNumeral] || null
+    const number = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000 }[romanNumeral.toUpperCase()] || null
     if (number === null) { throw "Not a valid Roman Numeral" }
     return number
 }
