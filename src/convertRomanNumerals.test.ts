@@ -19,10 +19,15 @@ describe.each([{romanNumeral: "I", number: 1},
             expect(convertRomanNumerals(romanNumeral)).toEqual(number)
         })
 })
+describe.each(["IVX", "MDCCLIM", "DLXC"])
+    ("Roman numeral order tests", romanNumeral => {
+        it(`Should throw an error because ${romanNumeral} is not a valid Roman numeral`, () => {
+            expect(() => convertRomanNumerals(romanNumeral)).toThrow("Not a valid Roman numeral order")
+        })
+})
 describe("Roman numeral edge cases", () => {
-    //should make sure that input is a valid roman numeral for example IVX is invalid
-    it("Should fail because H is not a roman numeral", () => {
-        expect(() => convertRomanNumerals("H")).toThrow("Not a valid Roman Numeral")
+    it("Should throw an error because H is not a Roman numeral", () => {
+        expect(() => convertRomanNumerals("H")).toThrow("Not a valid Roman numeral character")
     })
     it("Should convert the input to upper case", () => {
         expect(convertRomanNumerals("i")).toEqual(1)
