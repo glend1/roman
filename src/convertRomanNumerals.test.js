@@ -33,4 +33,7 @@ describe("convertRomanNumerals", () => {
     it("Should convert IV to 4", () => {
         expect(convertRomanNumerals("IV")).toEqual(4)
     })
+    it("Should convert IX to 9", () => {
+        expect(convertRomanNumerals("IX")).toEqual(9)
+    })
 })
