@@ -4,16 +4,11 @@ export const convertRomanNumerals = (romanNumerals: string) => {
         try {
             const currentNumber = convertSingleRomanNumeral(romanNumerals[i])
             const nextLetter = romanNumerals[i + 1]
-            if (nextLetter) {
-                const nextNumber = convertSingleRomanNumeral(nextLetter)
-                if (nextNumber <= currentNumber) {
-                    total += currentNumber
-                } else {
+            nextLetter ?
+                (convertSingleRomanNumeral(nextLetter) <= currentNumber) ?
+                    total += currentNumber :
                     total -= currentNumber
-                }
-            } else {
-                total += currentNumber
-            }
+            : total += currentNumber
         } catch (err) { return err }
     }
     return total
