@@ -22,7 +22,7 @@ describe.each([{romanNumeral: "I", number: 1},
 describe("Roman numeral edge cases", () => {
     //should make sure that input is a valid roman numeral for example IVX is invalid
     it("Should fail because H is not a roman numeral", () => {
-        expect(convertRomanNumerals("H")).toEqual("Not a valid Roman Numeral")
+        expect(() => convertRomanNumerals("H")).toThrow("Not a valid Roman Numeral")
     })
     it("Should convert the input to upper case", () => {
         expect(convertRomanNumerals("i")).toEqual(1)

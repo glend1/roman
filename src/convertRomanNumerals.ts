@@ -9,7 +9,7 @@ export const convertRomanNumerals = (romanNumerals: string) => {
                     total += currentNumber :
                     total -= currentNumber
             : total += currentNumber
-        } catch (err) { return err }
+        } catch (err) { throw err }
     }
     return total
 }
