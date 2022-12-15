@@ -36,6 +36,6 @@ const containsFourSequentialLetters = (i: number, romanNumerals: string) => {
     if (romanNumerals[i] === romanNumerals[i+1] &&
         romanNumerals[i] === romanNumerals[i+2] &&
         romanNumerals[i] === romanNumerals[i+3]) {
-        throw "Contains 4 sequential letters"
+            throw "Contains 4 sequential letters"
     }
 }
