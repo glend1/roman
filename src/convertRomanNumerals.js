@@ -6,12 +6,12 @@ export const convertRomanNumerals = (romanNumerals) => {
         if (nextLetter) {
             const nextNumber = convertSingleRomanNumeral(nextLetter)
             if (nextNumber <= currentNumber) {
-                total += convertSingleRomanNumeral(romanNumerals[i])
+                total += currentNumber
             } else {
-                total -= convertSingleRomanNumeral(romanNumerals[i])
+                total -= currentNumber
             }
         } else {
-            total += convertSingleRomanNumeral(romanNumerals[i])
+            total += currentNumber
         }
     }
     return total
