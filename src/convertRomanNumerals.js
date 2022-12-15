@@ -1,10 +1,20 @@
 export const convertRomanNumerals = (romanNumerals) => {
-    let currentValue = 0
+    let total = 0
     for (let i = 0; i < romanNumerals.length; i++) {
-        romanNumerals[i + 1]
-        currentValue += convertSingleRomanNumeral(romanNumerals[i])
+        const nextLetter = romanNumerals[i + 1]
+        const currentNumber = convertSingleRomanNumeral(romanNumerals[i])
+        if (nextLetter) {
+            const nextNumber = convertSingleRomanNumeral(nextLetter)
+            if (nextNumber <= currentNumber) {
+                total += convertSingleRomanNumeral(romanNumerals[i])
+            } else {
+                total -= convertSingleRomanNumeral(romanNumerals[i])
+            }
+        } else {
+            total += convertSingleRomanNumeral(romanNumerals[i])
+        }
     }
-    return currentValue
+    return total
 }
 
 const convertSingleRomanNumeral = (romanNumeral) => {
