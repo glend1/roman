@@ -6,7 +6,7 @@ export const convertRomanNumerals = (romanNumerals: string) => {
             containsFourSequentialLetters(i, romanNumerals)
             const currentNumber = convertSingleRomanNumeral(romanNumerals[i])
             const nextLetter = romanNumerals[i + 1]
-            nextLetter ?
+            nextLetter !== undefined ?
                 (convertSingleRomanNumeral(nextLetter) <= currentNumber) ?
                     total += currentNumber :
                     total -= currentNumber
