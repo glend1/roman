@@ -1,6 +1,7 @@
 import { convertRomanNumerals } from "./convertRomanNumerals";
 
 describe("convertRomanNumerals", () => {
+    //should make sure that input is a valid roman numeral for example IVX is invalid
     it("Should convert I to 1", () => {
         expect(convertRomanNumerals("I")).toEqual(1)
     })
