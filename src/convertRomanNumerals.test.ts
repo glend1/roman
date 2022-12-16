@@ -17,6 +17,7 @@ describe.each([{romanNumeral: "I", number: 1},
         it(`Should convert ${romanNumeral} to ${number}`, () => 
             expect(convertRomanNumerals(romanNumeral)).toEqual(number))
 )
+//TODO test functions seperately
 describe.each(["IVX", "MDCCLIM", "DLXC"])
     ("Roman numeral order tests", romanNumeral =>
         it(`Should throw an error because ${romanNumeral} is not a valid Roman numeral`, () => 

@@ -1,4 +1,7 @@
+// TODO create a ts config file
+
 export const convertRomanNumerals = (romanNumerals: string) => {
+    //TODO trim input
     let total = 0
     for (let i = 0; i < romanNumerals.length; i++) {
         try {
@@ -33,6 +36,7 @@ const isValidRomanNumeralOrder = (i: number, romanNumerals: string) => {
 }
 
 const containsFourSequentialLetters = (i: number, romanNumerals: string) => {
+    //convert to regex
     if (romanNumerals[i] === romanNumerals[i+1] &&
         romanNumerals[i] === romanNumerals[i+2] &&
         romanNumerals[i] === romanNumerals[i+3]) {
