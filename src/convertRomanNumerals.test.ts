@@ -32,4 +32,7 @@ describe("Roman numeral edge cases", () => {
         expect(() => convertRomanNumerals("IIII")).toThrow("Contains 4 sequential letters"))
     it("Should trim inputs", () => 
         expect(convertRomanNumerals("      I         ")).toBe(1))
+    it("Should trim multiline inputs", () => 
+        expect(convertRomanNumerals(`      I       
+          `)).toBe(1))
 })
