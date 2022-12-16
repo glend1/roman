@@ -34,10 +34,7 @@ const isValidRomanNumeralOrder = (i: number, romanNumerals: string) => {
 }
 
 const containsFourSequentialLetters = (i: number, romanNumerals: string) => {
-    //convert to regex
-    if (romanNumerals[i] === romanNumerals[i+1] &&
-        romanNumerals[i] === romanNumerals[i+2] &&
-        romanNumerals[i] === romanNumerals[i+3]) {
+    if (romanNumerals.match(new RegExp(`${romanNumerals[i]}{4,}`, "i"))) {
             throw "Contains 4 sequential letters"
     }
 }
