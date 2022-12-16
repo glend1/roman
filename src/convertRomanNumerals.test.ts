@@ -30,4 +30,6 @@ describe("Roman numeral edge cases", () => {
         expect(convertRomanNumerals("i")).toEqual(1))
     it("Should thow an error if the string contains 4 sequential numbers", () => 
         expect(() => convertRomanNumerals("IIII")).toThrow("Contains 4 sequential letters"))
+    it("Should trim inputs", () => 
+        expect(convertRomanNumerals("      I         ")).toBe(1))
 })

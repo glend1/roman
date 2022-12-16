@@ -1,7 +1,7 @@
 // TODO create a ts config file
 
 export const convertRomanNumerals = (romanNumerals: string) => {
-    //TODO trim input
+    romanNumerals = romanNumerals.trim()
     let total = 0
     for (let i = 0; i < romanNumerals.length; i++) {
         try {
