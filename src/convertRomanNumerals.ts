@@ -1,5 +1,3 @@
-// TODO create a ts config file
-
 export const convertRomanNumerals = (romanNumerals: string) => {
     romanNumerals = romanNumerals.trim()
     let total = 0
